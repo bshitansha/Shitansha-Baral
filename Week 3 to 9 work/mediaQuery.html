@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #container {
+            width: 1140px;
+            min-height: 800px;
+            margin: auto auto;
+        }
+
+        body {
+            font-family: Arial;
+            padding: 10px;
+            background: #f1f1f1;
+        }
+
+        /* Header/Blog Title */
+        .header {
+            padding: 20px;
+            text-align: center;
+            background: white;
+        }
+
+        .header h1 {
+            font-size: 50px;
+        }
+
+        /* Style the top navigation bar */
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        /* Style the topnav links */
+        .topnav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* Change color on hover */
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Left column */
+        .leftcolumn {
+            float: left;
+            width: 75%;
+        }
+
+        /* Right column */
+        .rightcolumn {
+            float: left;
+            width: 25%;
+            background-color: #f1f1f1;
+            padding-left: 20px;
+        }
+
+        /* Fake image placeholder */
+        .fakeimg {
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* Add a card effect for articles */
+        .card {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+            border: 1px solid #ccddee;
+            border-radius: 0px 30px 0px 30px;
+        }
+
+        /* Shared style for all article/sidebar images */
+        .card-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 5px solid #333;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+            margin-top: 20px;
+        }
+
+        /* Responsive layout - when the screen is less than 800px wide */
+        @media screen and (max-width: 800px) {
+            .leftcolumn,
+            .rightcolumn {
+                width: 100%;
+                padding: 0;
+            }
+        }
+
+        /* Responsive layout - when the screen is less than 400px wide */
+        @media screen and (max-width: 400px) {
+            .topnav a {
+                float: none;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div class="topnav">
+            <a href="#">Home</a>
+            <a href="#">About us</a>
+            <a href="#">Contact</a>
+            <a href="#" style="float: right">Link</a>
+        </div>
+
+        <div class="header">
+            <h1>My Website</h1>
+            <p>Resize the browser window to see the effect.</p>
+        </div>
+
+        <div class="row">
+            <div class="leftcolumn">
+
+                <!-- Card 1 -->
+                <div class="card">
+                    <h2>Visit to Bandipur</h2>
+                    <h5>Nepal's Timeless Gem, April 5, 2026</h5>
+                    <img src="Image7.jpg" class="card-img" alt="Article Image 7">
+                    <p>Hidden Beauty of Bandipur.</p>
+                    <p>
+                        The surroundings of this area are serene, which provides you plenty of chances to capture the artistic picture. The beauty of the Newar house, which has detailed woodwork, presents a magical historical charm. You can witness stone paved paths and traditional houses decorated with beautiful flowers.The locals of this area are mostly engaged in organic farming. You can interact with them and also take shots of their unique culture and lifestyle. In addition, you can visit the Bindabasini Temple, Ganesh Temple and Bandipur monastery to experience serene and spiritual ambiance of the place. Likewise, you can also explore the Teen Dhara area from where which gets the water from a natural source that the locals naturally use.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <h2>Festivals</h2>
+                    <h5>Country full of Festivals, April 5, 2026</h5>
+                    <img src="Image8.jpg" class="card-img" alt="Article Image 8">
+                    <p>Nepali citizens celebrating Jatra.</p>
+                    <p>
+                        Nepal is a country full of festivals with a variety of cultures co-existing in this small country. There’s a saying, ” Nepal has more festivals than the days in a year”. Every day is a day of celebration for one or the other community of Nepal.Festivals in Nepal are full of colors, lights, music, and food. From the unique dresses to the special decorations, festivals in Nepal are quite photo friendly. The best time to visit Nepal is during the festival season, which is from September to November. During this time, you can witness the vibrant culture of Nepal and capture some amazing photos of the festivals. Some of the most popular festivals in Nepal include Dashain, Tihar, Holi, and Teej. Each festival has its own unique traditions and customs, making it a great opportunity for photographers to capture the essence of Nepalese culture. 
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="rightcolumn">
+
+                <!-- About Me -->
+                <div class="card">
+                    <h2></h2>
+                    <img src="Image3.jpg" class="card-img" alt="Patan Durbar Square, Kathmandu">
+                    <p>Patan Dhoka/ Durbar square is popular for tourist to Visit and learn about the history of Malla's written in every corner of the patan.</p>
+                </div>
+
+                <!-- Popular Post -->
+                <div class="card">
+                    <h3>Beautiful Scenario of Nepal!</h3>
+                    <img src="Image4.jpg" class="card-img" alt="Popular Post Image">
+                    <img src="Image5.jpg" class="card-img" alt="Popular Post Image">
+                    <img src="Image6.jpg" class="card-img" alt="Popular Post Image">
+                </div>
+
+                <!-- Follow Me -->
+                <div class="card">
+                    <h3>Follow Me</h3>
+                    <p>Email:shitansha0428@gmail.com
+                        Contact: +977-987654321
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer">
+            <h2>Copyright &copy; 2023 Shitansha Baral. All rights reserved.</h2>
+        </div>
+    </div>
+</body>
+
+</html>

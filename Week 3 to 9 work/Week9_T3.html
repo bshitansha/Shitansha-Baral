@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rees International</title>
+    <style> 
+        *{ margin: 0; padding: 0; box-sizing: border-box; } 
+        body { 
+            font-family: Georgia, serif; 
+            background: #aaa  ;
+            min-height: 100vh; 
+            display: flex; 
+            justify-content: center; 
+            align-items: flex-start; 
+            padding: 20px; 
+        }  
+        
+        .browser-box 
+        {
+            width: 780px;
+            border: 2px solid #666;
+            background: #fff;
+            box-shadow: 4px 4px 14px rgba(0,0,0,0.3);
+        }  
+
+        .browser-bar 
+        {
+            background: #d8d8d8;
+            border-bottom: 1px solid #999;
+            padding: 5px 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        } 
+
+        .browser-bar .dots { display: flex; gap: 3px; }
+        .browser-bar .dots span 
+        {
+            width: 9px; height: 9px;
+            border-radius: 50%;
+            background: #999;
+            border: 1px solid #777;
+        } 
+
+        .browser-bar .url 
+        {
+            flex: 1;
+            background: #fff;
+            border: 1px solid #aaa;
+            padding: 2px 8px;
+            font-size: 11px;
+            color: #555;
+            font-family: Arial, sans-serif;
+        }
+
+        header { 
+            padding: 10px 16px 0 16px; 
+            border-bottom: 1px solid #ccc; 
+        } 
+
+        .header-top { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            margin-bottom: 8px; 
+        }
+
+        .logo-box 
+        { 
+            width:90px; 
+            height:55px; 
+            border: 1px solid #999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        } 
+
+        .log-box img { 
+            width: 100% ;
+            height:100%; 
+            object-fit: contain; 
+        } 
+
+        nav{ 
+            display: flex; 
+            gap: 3px; 
+        } 
+
+        nav a
+        { 
+            padding: 5px 10px; 
+            text-decoration: none; 
+            color: #222; 
+            border: 1px solid #bbb; 
+            font-size: 11px; 
+            background: #f2f2f2; 
+            font-family: Arial, sans-serif;
+            white-space: nowrap; 
+        } 
+
+        nav a .active { 
+            background: #3a7bd5; 
+            color: #fff;
+            border-color: #3a7bd5; 
+        }
+
+        .address-bar { 
+            text-align: right; 
+            font-size: 10px; 
+            color: #555; 
+            padding: 5px 0; 
+            border-top: 1px solid #eee; 
+        } 
+
+        main{ 
+            padding: 16px; 
+        } 
+
+        main h1{ 
+            font-size: 20px; 
+            font-weight: bold; 
+            margin-bottom: 14px; 
+        } 
+
+        .cards-grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 12px;
+        } 
+
+        .card { 
+            background: #f0f0f0; 
+            border: 1px solid #ddd;
+            padding: 10px; 
+            display: flex; 
+            gap: 10px; 
+            align-items: flex-start; 
+        } 
+
+        .comp-logo{ 
+            min-width: 70px; 
+            width: 70px; 
+            height: 60px;  
+            border: 1px solid #999;
+            overflow: hidden;
+            flex-shrink: 0;
+        } 
+
+        .comp-logo img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: contain; 
+        } 
+
+        .card-text h3{ 
+            font-size: 13px; 
+            color: #3a7bd5;
+            margin-bottom: 2px; 
+        }
+
+        .card-text .ceo 
+        { 
+            font-style: italic; 
+            font-size: 11px; 
+            color: #333; 
+            padding-bottom: 5px; 
+            border-bottom: 1px solid #bbb; 
+            margin-bottom: 6px; 
+        } 
+
+        .card-text .desc { 
+            font-size: 10px; 
+            line-height: 1.6; 
+            color: #444; 
+        }  
+
+        footer 
+        {
+            border-top: 1px solid #ccc;
+            padding: 12px 16px;
+            display: grid;
+            grid-template-columns: 110px 1fr 130px 140px;
+            gap: 14px;
+        }
+
+        footer h4  
+        { 
+            font-size: 12px; 
+            font-weight: bold; 
+            margin-bottom: 8px; 
+        } 
+
+        .sitemap ul { 
+            list-style: none; 
+        } 
+
+        .sitemap ul li a { 
+            text-decoration: none; 
+            color: #333; 
+            font-size: 10px; 
+            line-height: 1.9; 
+            display: block; 
+        } 
+        .sitemap ul li a:hover { color: #3a7bd5; }
+
+        .testimonial p.quote { 
+            font-size: 10px; 
+            line-height: 1.7; 
+            color: #444; 
+            margin-bottom: 8px; 
+        } 
+
+        .testimonial p.author { 
+            font-size: 10px; 
+            font-style: italic; 
+            color: #333;  
+        } 
+
+        .map-placeholder { 
+            width: 100%; 
+            height: 90px; 
+            border: 1px solid #888; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            background: #f9f9f9; 
+            font-size: 11px; 
+            color: #666;  
+            font-family: Arial, sans-serif;
+        } 
+
+        .where p { 
+            font-size: 10px; 
+            line-height: 1.9; 
+            color: #444; 
+        } 
+</style>
+    
+</head>
+<body>
+    <div class="browser-box">
+       
+        <div class="browser-bar">
+        <div class="dots">
+      <span></span><span></span><span></span>
+        </div>
+        <div class="url">http://www.rees-consulting.com</div>
+        </div>
+
+    
+    
+    <header> 
+        <div class="header-top"> 
+        <div class="logo-box"> 
+                <img src="img.jpg" alt="Logo" /> 
+            </div> 
+            <nav> 
+                <a href="#">Home</a> 
+                <a href="#">About Us</a> 
+                <a href="#">Services</a>
+                <a href="#" class="active"> Who We work with</a> 
+                <a href="#"> Contact</a> 
+            </nav>
+        </div> 
+        <div class="address-bar"> Calle de tu Oficina 20, 28029, Madrid. Tel: 91 756</div> 
+    </header> 
+
+    <main> 
+        <h1>Who We Work With</h1> 
+
+        <div class="cards-grid"> 
+
+            <div class="card"> 
+                <div class="comp-logo"> 
+                    <img src="image.jpg" alt="Company Logo" /> 
+                </div> 
+                <div class="card-text"> 
+                    <h3>Coca Cola</h3> 
+                    <p class="ceo">Steve Jobs-CEO</p>  
+                    <p class="desc">Working with Rees... Nullam id dolor id nibh ultrices vehicula ut id elit. Donec id elit non mi porta gravida at ege metus. Maecenas faucibus mollis interdum</p> 
+                </div> 
+            </div>
+
+            <div class="card"> 
+                <div class="comp-logo"> 
+                    <img src="image.jpg" alt="Company Logo" /> 
+                </div> 
+                <div class="card-text"> 
+                    <h3>Coca Cola</h3> 
+                    <p class="ceo">Steve Jobs-CEO</p>  
+                    <p class="desc">Working with Rees... Nullam id dolor id nibh ultrices vehicula ut id elit. Donec id elit non mi porta gravida at ege metus. Maecenas faucibus mollis interdum</p> 
+                </div> 
+            </div> 
+
+            <div class="card"> 
+                <div class="comp-logo"> 
+                    <img src="image.jpg" alt="Company Logo" /> 
+                </div> 
+                <div class="card-text"> 
+                    <h3>Coca Cola</h3> 
+                    <p class="ceo">Steve Jobs-CEO</p>  
+                    <p class="desc">Working with Rees... Nullam id dolor id nibh ultrices vehicula ut id elit. Donec id elit non mi porta gravida at ege metus. Maecenas faucibus mollis interdum</p> 
+                </div> 
+            </div> 
+
+        </div>
+    </main> 
+    
+    <footer> 
+        <div class="sitemap"> 
+            <h4>Sitemap</h4> 
+            <ul> 
+                <li><a href="#">Home</a></li> 
+                <li><a href="#">About Us</a></li> 
+                <li><a href="#">Services</a></li> 
+                <li><a href="#">Who We Work With</a></li> 
+                <li><a href="#">Contact</a></li> 
+            </ul> 
+        </div> 
+
+        <div class="testimonial"> 
+            <h4>Testimonial</h4> 
+            <p class="quote"> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at.</p> 
+            <p class="author">Steve Lilly, CEO Windsor Foods</p> 
+        </div> 
+
+        <div>
+            <div class="map-placeholder">Google Map</div> 
+        </div> 
+
+        <div class="where"> 
+            <h4>Where We Are</h4> 
+            <p> Calle de tu Oficina 20, <br>
+                28029, <br>
+                Madrid. <br>
+                Tel: 91 756 <br>
+                Mobile: +34 <br>
+                info@ 
+            </p>
+        </div> 
+    </footer> 
+</body>
+</html>
