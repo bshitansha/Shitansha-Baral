@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Travel Nepal</title> 
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        function validateForm() { 
+            let name= document.forms["contactForm"]["name"].value; 
+            let email= document.forms["contactForm"]["email"].value;
+            let message= document.forms["contactForm"]["message"].value;
+
+            if (name == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+            if (email == "") {
+                alert("Email must be filled out");
+                return false;
+            }
+            if (message == "") {
+                alert("Message must be filled out");
+                return false;
+            }
+
+        } 
+    </script>
+
+</head> 
+
+<body> 
+    <div class="container"> 
+
+       <header>
+            <div>
+                <img src="logo1.png" width="155px" align="center">
+            </div> 
+            <h1>Contact Us</h1> 
+        </header> 
+
+        <nav> 
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <a href="gallery.html">Gallery</a> 
+        </nav> 
+
+        <h2>Contact Form</h2> 
+
+        <form name="contactForm" onsubmit="return validateForm()" method="post" action="submit_form.php"> 
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message"></textarea><br><br>
+
+            <input type="submit" value="Submit"> 
+        </form> 
+
+        <footer>
+            <p>Travel Nepal Company Pvt. Ltd. copyright &copy; 2024. All rights reserved.
+                <br>Address: Kathmandu, Nepal
+                <br>Phone: +977-1-1234567
+                <br>Email: info@travelnepal.com 
+            </p> 
+            
+            <a href="mailto:info@travelnepal.com">Contact Us!</a>
+        </footer>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    
+</body>
+</html>

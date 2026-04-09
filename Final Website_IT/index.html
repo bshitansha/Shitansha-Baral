@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Nepal - Home</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+
+<body>  
+
+    <div class="container">
+
+        <header> 
+            <div>
+                <img src="logo1.png" width="155px" align="center">
+            </div> 
+            <h1>Travel Nepal</h1> 
+        </header> 
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a> 
+            <a href="services.html">Services</a>
+        </nav> 
+
+        <h2>Welcome to Travel Nepal</h2> 
+
+        <div class="slider">
+    <div class="slides" id="slides">
+        <img src="image1.jpg" alt="Image 1">
+        <img src="image12.jpg" alt="Image 12">
+        <img src="image16.jpg" alt="Image 3">
+        <img src="image14.jpg" alt="Image 14">
+        <img src="image15.jpg" alt="Image 15">
+    </div>
+</div>
+
+<div class="buttons">
+    <button onclick="prev()">Prev</button>
+    <button onclick="next()">Next</button>
+</div>
+
+<script>
+    
+    let index = 0;
+    const slides = document.getElementById("slides");
+    const total = 5;
+    const slideWidth = 1000; // same as image width
+
+    function showSlide() 
+    {
+        slides.style.transform = "translateX(-" + (index * slideWidth) + "px)";
+    }
+
+    function next() 
+    {
+        index = (index + 1) % total;
+        showSlide();
+    }
+
+    function prev() 
+    {
+        index = (index - 1 + total) % total;
+        showSlide();
+    }
+
+
+</script>
+
+
+        
+         
+
+        <p>Explore the beauty of Nepal with our guided tours and unforgettable experiences. We provide amazing adventures to mountains, lakes, heritage sites and valleys for all travelers. 
+            <br> 
+            At Travel Nepal, we members are passionate, dedicated to sharing the beauty and cultural richness of Nepal with travelers from around the world. With years of experience as trekking guides for major French trekking agencies and extensive training in tourism, we bring a wealth of knowledge and expertise to ensure your adventure is unforgettable.
+            Travel Nepal specializes in a wide range of tours that cater to both seasoned trekkers and casual travelers. Whether you're seeking a challenging trek in the Himalayas or a cultural tour of Nepal's vibrant cities, we have something for everyone.
+            <br>
+            We believe in providing personalized and memorable experiences. Whether you’re traveling in a large group or seeking a more intimate adventure, we tailor our tours to meet your needs. Our deep knowledge of the terrain and local culture, combined with our commitment to exceptional service, ensures that your journey with us will be both safe and inspiring. Join us at Travel Nepal, and let us guide you through the wonders of Nepal, where every path leads to a new discovery.
+        </p>
+
+        <h3>Popular Destinations</h3> 
+
+        <table border="1" width="100%"
+        cellspacing="0" cellpadding="10 "> 
+            <tr bgcolor="#9ED3DC">  
+                <th>Place</th> 
+                <th>Destination</th> 
+                <th>Price</th>
+                <th>Why Visit</th>
+            </tr> 
+
+            <tr>
+                <td>1</td>
+                <td>Pokhara</td>
+                <td>$500</td>
+                <td>Beautiful lakes and mountain views</td>
+            </tr> 
+
+            <tr>
+                <td>2</td>
+                <td>Kathmandu</td>
+                <td>$300</td>
+                <td>Rich culture and heritage sites</td>
+
+                <tr>
+                    <td>3</td>
+                    <td>Chitwan</td>
+                    <td>$400</td>
+                    <td>Wildlife sanctuary and national park</td>
+                </tr> 
+
+                <tr>
+                    <td>4</td>
+                    <td>Everest Base Camp</td>
+                    <td>$600</td>
+                    <td>Iconic trekking destination</td> 
+                </tr> 
+
+                <tr>
+                    <td>5</td>
+                    <td>Langtang</td>
+                    <td>$550</td>
+                    <td>Scenic mountain landscape</td>
+                </tr> 
+
+                <tr>
+                    <td>6</td>
+                    <td>Mustang</td>
+                    <td>$500</td>
+                    <td>Remote and culturally rich region</td>
+                </tr> 
+
+                <tr>
+                    <td>7</td>
+                    <td>Rara Lake</td>
+                    <td>$450</td>
+                    <td>Serene lake surrounded by mountains</td>
+                </tr> 
+
+                    <tr>
+                        <td>8</td>
+                        <td>Bandipur</td>
+                        <td>$350</td>
+                        <td>Charming hilltop town with panoramic views</td>
+                    </tr>
+
+                    <tr>
+                        <td>9</td>
+                        <td>Gosaikunda</td>
+                        <td>$400</td>
+                        <td>Sacred alpine lake with stunning scenery</td>
+                    </tr> 
+
+                    <tr>
+                        <td>10</td>
+                        <td>Rara National Park</td>
+                        <td>$450</td>
+                        <td>Protected area with diverse flora and fauna</td>
+                    </tr> 
+
+                    <tr>
+                        <td>11</td>
+                        <td>Upper Mustang</td>
+                        <td>$550</td>
+                        <td>Remote and culturally rich region with unique landscapes</td>
+                    </tr> 
+
+                    <tr>
+                        <td>12</td>
+                        <td>Ilam</td>
+                        <td>$300</td>
+                        <td>Tea plantations and scenic views</td>
+                    </tr>  
+
+                    <tr>
+                        <td>13</td>
+                        <td>Janakpur</td>
+                        <td>$250</td>
+                        <td>Historical site with cultural significance</td>
+                    </tr> 
+
+                    <tr>
+                        <td>14</td>
+                        <td>Baglung</td>
+                        <td>$350</td>
+                        <td>Historical town with colonial architecture</td>
+                    </tr> 
+
+                    <tr>
+                        <td>15</td>
+                        <td>Bardiya</td>
+                        <td>$400</td>
+                        <td>Protected area with diverse wildlife</td>
+                    </tr> 
+        </table> 
+
+        <footer>
+            <p>Travel Nepal Company Pvt. Ltd. copyright &copy; 2024. All rights reserved.
+                <br>Address: Kathmandu, Nepal
+                <br>Phone: +977-1-1234567
+                <br>Email: info@travelnepal.com 
+            </p> 
+            
+            <a href="mailto:info@travelnepal.com">Contact Us!</a>
+        </footer> 
+
+    </div>
+    
+</body>
+</html>
